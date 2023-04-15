@@ -22,6 +22,10 @@ A shell script is available for the installation of nvm on the Ubuntu 20.04 Linu
 sudo apt install curl
 ```
 
+```
+curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash 
+```
+
 The nvm installer script creates an environment entry to the login script of the current user. You can either log out and log in again to load the environment or execute the below command to do the same.
 
 ```
