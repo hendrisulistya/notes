@@ -1,96 +1,122 @@
+# How To Install NVM on Ubuntu 20.04
 
-How To Install NVM on Ubuntu 20.04
-==================================
+_Last Updated: July 07, 2024_
 
-NVM is a Node Version Manager tool. Using the NVM utility, you can install multiple node.js versions on a single system. You can also choose a specific Node version for applications. It also provides an option to auto-select the node version using the .nvmrc configuration file.
+NVM, or Node Version Manager, is a handy tool that lets you manage multiple Node.js versions on your Ubuntu system. This allows you to choose the specific Node.js version your applications require, ensuring compatibility and flexibility.
 
+This guide walks you through installing NVM on Ubuntu 20.04 and demonstrates its basic functionalities.
 
-This tutorial will help you to install NVM on Ubuntu 20.04 Linux system. Also, allow you to install different node versions and other useful examples.
+**Prerequisites**
 
-Prerequisites
--------------
+- You'll need a running Ubuntu 20.04 system with shell access.
+- Log in with a user account where you want to install Node.js.
 
--   You must have a running Ubuntu 20.04 Linux system with shell access.
--   Log in with a user account to which you need to install node.js.
+**Installing NVM on Ubuntu**
 
-Installing NVM on Ubuntu
-------------------------
+We'll utilize a script provided by the NVM project to facilitate installation. Open a terminal window and follow these steps:
 
-A shell script is available for the installation of nvm on the Ubuntu 20.04 Linux system. Open a terminal on your system or connect a remote system using SSH. Use the following commands to install curl on your system, then run the nvm installer script.
+1.  **Install curl:** If you don't already have curl installed, use the following command:
 
-```
-sudo apt install curl
-```
+    Bash
 
-```
-curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash 
-```
+    ```
+    sudo apt install curl
 
-The nvm installer script creates an environment entry to the login script of the current user. You can either log out and log in again to load the environment or execute the below command to do the same.
+    ```
 
-```
-source ~/.bashrc
-```
+2.  **Run the NVM installer script:** Execute the following command to download and run the NVM installer script:
 
-The nvm installation is successfully completed on your Ubuntu system.
+    Bash
 
-Installing Node using NVM
--------------------------
+    ```
+    curl -o- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
 
-You can install multiple node.js versions using nvm. And use the required version for your application from installed node.js.
+    ```
 
+    The script creates an environment entry for your current user.
 
-Install the latest version of node.js. Here node is the alias for the latest version.
+3.  **Load the environment (optional):** NVM's changes typically take effect after a logout and login. Alternatively, you can source your shell's configuration file to load the environment immediately:
 
-```
-nvm install node
-```
+    Bash
 
-To install a specific version of node:
+    ```
+    source ~/.bashrc
 
-```
-nvm install 12.18.3
-```
+    ```
 
-You can choose any other version to install using the above command. The very first version installed becomes the default. New shells will start with the default version of the node (e.g., nvm alias default).
+**Installing Node.js using NVM**
 
+With NVM installed, you can easily manage Node.js versions on your system. Here are some commands for common tasks:
 
-Working with NVM
-----------------
+1.  **Install the latest Node.js version:** The `node` alias typically points to the latest version. Use the following command to install it:
 
-You can use the following command to list installed versions of the node for the current user.
+    Bash
 
+    ```
+    nvm install node
 
-```
-nvm ls
-```
+    ```
 
+2.  **Install a specific Node.js version:** Specify the desired version number after `nvm install`:
 
-With this command, you can find the available node.js version for the installation.
+    Bash
 
-```
-nvm ls-remote
-```
+    ```
+    nvm install 16.15.0
 
-You can also select a different version for the current session. The selected version will be the currently active version for the current shell only.
+    ```
 
-```
-nvm use 12.18.3
-```
+    The first installed version becomes the default.
 
-To find the default Node version set for the current user, type:
+**Working with NVM**
 
-```
-nvm run default --version
-```
+NVM offers various commands to manage and work with Node.js versions:
 
-You can run a Node script with the desired version of node.js using the below command:
+1.  **List installed versions:** See a list of all Node.js versions installed on your system with:
 
-```
-nvm exec 12.18.3 server.js
-```
+    Bash
 
-Conclusion
-----------
+    ```
+    nvm ls
 
-In this tutorial, you have learned to install nvm on Ubuntu 20.04 LTS (Focal Fossa) Linux system. Also, get a basic understanding of the uses of nvm.
+    ```
+
+2.  **List available versions (remote):** Use this command to discover all available Node.js versions on the NVM project's repository:
+
+    Bash
+
+    ```
+    nvm ls-remote
+
+    ```
+
+3.  **Use a specific version (current shell):** Activate a particular Node.js version for the current shell session:
+
+    Bash
+
+    ```
+    nvm use 14.17.0
+
+    ```
+
+4.  **Check default version:** Find out the default Node.js version set for your user:
+
+    Bash
+
+    ```
+    nvm run default --version
+
+    ```
+
+5.  **Run a Node.js script with a specific version:** Execute a Node.js script using a chosen Node.js version:
+
+    Bash
+
+    ```
+    nvm exec 10.24.1 server.js
+
+    ```
+
+**Conclusion**
+
+By following this guide, you've successfully installed and configured NVM on your Ubuntu 20.04 system. You've also learned how to manage Node.js versions and leverage NVM to ensure your applications run on the appropriate Node.js environment. Now, you can enjoy the flexibility of having multiple Node.js versions at your disposal!

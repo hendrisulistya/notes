@@ -1,3 +1,6 @@
+# A Guide to SSH Key-Based Authentication
+
+_Last Updated: 2024-07-07_
 
 **Introduction**
 
@@ -5,9 +8,9 @@ Tired of constantly typing your password for SSH connections to your VPS? SSH ke
 
 **Benefits of SSH Key-Based Authentication**
 
--   **Enhanced Security:** Public keys are not transmitted over the network during login, unlike passwords, which are vulnerable to interception.
--   **Convenience:** Eliminate the need to remember and enter your password for every SSH session.
--   **Efficiency:** Streamline your workflow with faster login times.
+- **Enhanced Security:** Public keys are not transmitted over the network during login, unlike passwords, which are vulnerable to interception.
+- **Convenience:** Eliminate the need to remember and enter your password for every SSH session.
+- **Efficiency:** Streamline your workflow with faster login times.
 
 **Generating an SSH Key Pair**
 
@@ -21,13 +24,13 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com" -f <path/to/key>
 
 ```
 
--   Press Enter when prompted for the key pair location.
--   If using a passphrase, enter it twice when prompted.
+- Press Enter when prompted for the key pair location.
+- If using a passphrase, enter it twice when prompted.
 
 This command generates two files:
 
--   `<path/to/key>`: Your private key file (**Keep this secure!**).
--   `<path/to/key>.pub`: Your public key file.
+- `<path/to/key>`: Your private key file (**Keep this secure!**).
+- `<path/to/key>.pub`: Your public key file.
 
 **Adding the Public Key to your VPS**
 
@@ -54,11 +57,11 @@ If `ssh-copy-id` is unavailable, follow these steps:
 
 1.  Access your VPS using another method (e.g., control panel or temporary password).
 2.  Open a terminal on your VPS.
-3.  Create the `.ssh` directory (if it doesn't exist):  `mkdir ~/.ssh`
-4.  Create a file named `authorized_keys` within the `.ssh` directory:  `nano ~/.ssh/authorized_keys`
+3.  Create the `.ssh` directory (if it doesn't exist): `mkdir ~/.ssh`
+4.  Create a file named `authorized_keys` within the `.ssh` directory: `nano ~/.ssh/authorized_keys`
 5.  Paste the contents of your public key file (`<path/to/key>.pub`) into the `authorized_keys` file.
 6.  Save and close the file.
-7.  Set the permissions of `authorized_keys` to 600:  `chmod 600 ~/.ssh/authorized_keys`
+7.  Set the permissions of `authorized_keys` to 600: `chmod 600 ~/.ssh/authorized_keys`
 
 **Logging in with SSH Key**
 
