@@ -3,7 +3,7 @@
 
 **Abstract**
 
-This document outlines the specifications for a personal note-taking system designed to enhance learning, memory, and organization. It establishes standards for file naming, format, and categorization, promoting efficient information capture and retrieval. By following these guidelines, users can build a robust system that empowers effective knowledge management.
+This document outlines the specifications for a personal note-taking system designed to enhance learning, memory, and organization. It establishes standards for format and categorization, promoting efficient information capture and retrieval. By following these guidelines, users can build a robust system that empowers effective knowledge management.
 
 **Motive:**
 
@@ -20,12 +20,7 @@ This project aims to provide a system for you to effectively capture and organiz
 
 **Standards:**
 
-This section defines the standards for file naming, format, and categorization of your notes, including suggestions for effective writing:
-
-**File Naming:**
-
--   Use lowercase letters and underscores (`_`) to separate words in filenames (e.g.,  `meeting_notes_2024-07-07.md`,  `research_paper_summary_ai.md`).
--   Avoid using special characters like `#`,  `$`, or `%` in filenames.
+This section defines the standards for format and categorization of your notes, including suggestions for effective writing:
 
 **File Format:**
 
@@ -58,6 +53,6 @@ Organize your notes effectively by categorizing them based on their content:
 
 1.  Choose a note-taking application that suits your needs. Popular options include simplistic text editors, dedicated note-taking apps, or cloud-based solutions.
 2.  Create a dedicated folder for your notes on your computer or cloud storage.
-3.  Start taking notes! Use the defined file naming conventions and categorize your notes accordingly.
+3.  Start taking notes! Use the defined format and categorization suggestions to organize your information effectively.
 
 By following these guidelines, you can build a robust and organized note-taking system that empowers you to capture, retain, and leverage information effectively.
