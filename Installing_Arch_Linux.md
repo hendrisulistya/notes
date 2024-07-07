@@ -1,3 +1,19 @@
+## Installing Arch Linux
+
+*Last Updated: July 7, 2024*
+
+**Abstract**
+
+This guide outlines the installation process for Arch Linux, a customizable and powerful Linux distribution. It provides step-by-step instructions, including network configuration, disk partitioning, user creation, and desktop environment installation.
+
+**File Category:**
+
+Work/Education
+
+**Prerequisites:**
+
+Basic understanding of Linux commands and partitioning concepts.
+
 ### Internet Check:
     ip a
 
