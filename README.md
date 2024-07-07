@@ -1,4 +1,4 @@
-## Getting Started with Your Note-Taking System
+# Getting Started with Your Note-Taking System
 
 _Last Update: 2024-07-07_
 
